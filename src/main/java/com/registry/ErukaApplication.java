@@ -6,7 +6,6 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  *@ClassName ErukaApplication
- *@Deacription TODO
  *@Author os-guokui
  *@Date 2021/3/29 17:26
  *@Version 1.0
