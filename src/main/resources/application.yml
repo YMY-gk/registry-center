@@ -12,6 +12,14 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
     waitTimeInMsWhenSyncEmpty: 0
+      # 是否开启自我保护机制
+    enable-self-preservation: true
+      # 续约成功的阈值，当续约成功百分比低于85%，此时会自动开启自我保护机制
+    renewal-percent-threshold: 0.85
+      # 期望eureka客户端续约的时间间隔
+    expected-client-renewal-interval-seconds: 30
+      # 对于不可用服务间隔多久将其剔除，默认是0s，即：立即剔除
+    eviction-interval-timer-in-ms: 2000
 ribbon:
   eureka:
     enabled: true
